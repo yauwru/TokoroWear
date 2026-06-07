@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
 
   return (
     <>
@@ -81,19 +79,17 @@ export default function Footer() {
             <h5 className="text-white font-bold uppercase tracking-[0.2em] text-xs font-headline">
               Newsletter
             </h5>
-            <div className="relative">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Anda"
-                className="w-full bg-transparent border-b border-gray-600 py-3 focus:outline-none focus:border-white transition-colors text-white placeholder-gray-500 text-sm"
-              />
-              <button className="absolute right-0 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity">
-                <span className="material-symbols-outlined text-white">
-                  arrow_forward
-                </span>
-              </button>
+            <div className="space-y-3">
+              <p className="text-gray-400 text-xs leading-relaxed">
+                Dapatkan info koleksi terbaru & drop eksklusif langsung di inbox Anda.
+              </p>
+              <Link
+                href="/berlangganan"
+                className="flex items-center gap-2 border border-gray-600 text-white px-4 py-3 text-[10px] font-bold uppercase tracking-widest hover:border-white hover:bg-white/5 transition-all"
+              >
+                <span className="material-symbols-outlined text-[14px]">mail</span>
+                Daftar Newsletter
+              </Link>
             </div>
 
             <div className="flex gap-8 pt-4">

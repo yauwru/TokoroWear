@@ -180,3 +180,34 @@ export function updateOrderStatus(id: string, status: OrderStatus): boolean {
   writeJSON("orders.json", orders);
   return true;
 }
+
+// ── Subscribers ───────────────────────────────────────
+export type Subscriber = {
+  email: string;
+  name: string | null;
+  subscribedAt: string;
+};
+
+export function getSubscribers(): Subscriber[] {
+  try {
+    return readJSON<Subscriber[]>("subscribers.json");
+  } catch {
+    return [];
+  }
+}
+
+export function addSubscriber(subscriber: Subscriber): "added" | "exists" {
+  const list = getSubscribers();
+  if (list.find((s) => s.email === subscriber.email)) return "exists";
+  list.unshift(subscriber);
+  writeJSON("subscribers.json", list);
+  return "added";
+}
+
+export function deleteSubscriber(email: string): boolean {
+  const list = getSubscribers();
+  const filtered = list.filter((s) => s.email !== email);
+  if (filtered.length === list.length) return false;
+  writeJSON("subscribers.json", filtered);
+  return true;
+}

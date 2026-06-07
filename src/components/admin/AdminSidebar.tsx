@@ -9,6 +9,7 @@ const NAV = [
   { href: "/admin", label: "Dashboard", icon: "dashboard", exact: true },
   { href: "/admin/pesanan", label: "Pesanan", icon: "receipt_long" },
   { href: "/admin/produk", label: "Produk", icon: "inventory_2" },
+  { href: "/admin/subscribers", label: "Subscribers", icon: "mail" },
   { href: "/admin/pembayaran", label: "Pembayaran", icon: "payment" },
   { href: "/admin/pengiriman", label: "Pengiriman", icon: "local_shipping" },
   { href: "/admin/laporan", label: "Laporan", icon: "bar_chart" },
