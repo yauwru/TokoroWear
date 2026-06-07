@@ -1,12 +1,22 @@
 import { auth } from "@/lib/auth";
 import { NextResponse } from "next/server";
 
-export default auth((req) => {
-  const isAdminRoute = req.nextUrl.pathname.startsWith("/admin");
-  const isLoginPage = req.nextUrl.pathname === "/admin/login";
+const ADMIN_EMAIL = "tokorowear@gmail.com";
 
-  if (isAdminRoute && !isLoginPage && !req.auth) {
-    return NextResponse.redirect(new URL("/admin/login", req.url));
+export default auth((req) => {
+  const { pathname } = req.nextUrl;
+
+  if (pathname === "/admin/login" || pathname === "/admin/unauthorized") {
+    return NextResponse.next();
+  }
+
+  if (pathname.startsWith("/admin")) {
+    if (!req.auth?.user) {
+      return NextResponse.redirect(new URL("/admin/login", req.url));
+    }
+    if (req.auth.user.email !== ADMIN_EMAIL) {
+      return NextResponse.redirect(new URL("/admin/unauthorized", req.url));
+    }
   }
 
   return NextResponse.next();
