@@ -196,12 +196,12 @@ export default function KeranjangPage() {
                 </div>
               </div>
 
-              <button className="w-full mt-12 bg-primary text-white py-6 px-4 font-black uppercase tracking-widest text-sm hover:bg-primary-container transition-all duration-300 group flex items-center justify-center gap-3">
+              <Link href="/checkout" className="w-full mt-12 bg-primary text-white py-6 px-4 font-black uppercase tracking-widest text-sm hover:bg-primary-container transition-all duration-300 group flex items-center justify-center gap-3">
                 LANJUT KE CHECKOUT
                 <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
                   arrow_right_alt
                 </span>
-              </button>
+              </Link>
 
               <div className="mt-8 flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-secondary font-bold">

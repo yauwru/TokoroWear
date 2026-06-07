@@ -54,6 +54,41 @@ export type ShippingMethod = {
   description: string;
 };
 
+export type OrderItem = {
+  productId: string;
+  productName: string;
+  size: string;
+  color: string;
+  quantity: number;
+  price: number;
+};
+
+export type OrderStatus =
+  | "menunggu_pembayaran"
+  | "dikonfirmasi"
+  | "diproses"
+  | "dikirim"
+  | "selesai"
+  | "dibatalkan";
+
+export type Order = {
+  id: string;
+  customerName: string;
+  customerPhone: string;
+  customerEmail: string;
+  address: string;
+  items: OrderItem[];
+  subtotal: number;
+  shippingCost: number;
+  tax: number;
+  total: number;
+  paymentMethod: string;
+  shippingMethod: string;
+  status: OrderStatus;
+  note: string;
+  createdAt: string;
+};
+
 // ── Products ──────────────────────────────────────────
 export function getProducts(): Product[] {
   return readJSON<Product[]>("products.json");
@@ -115,5 +150,33 @@ export function updateShippingMethod(id: string, updates: Partial<ShippingMethod
   if (idx === -1) return false;
   methods[idx] = { ...methods[idx], ...updates };
   writeJSON("shipping-methods.json", methods);
+  return true;
+}
+
+// ── Orders ────────────────────────────────────────────
+export function getOrders(): Order[] {
+  try {
+    return readJSON<Order[]>("orders.json");
+  } catch {
+    return [];
+  }
+}
+
+export function getOrderById(id: string): Order | undefined {
+  return getOrders().find((o) => o.id === id);
+}
+
+export function createOrder(order: Order): void {
+  const orders = getOrders();
+  orders.unshift(order);
+  writeJSON("orders.json", orders);
+}
+
+export function updateOrderStatus(id: string, status: OrderStatus): boolean {
+  const orders = getOrders();
+  const idx = orders.findIndex((o) => o.id === id);
+  if (idx === -1) return false;
+  orders[idx].status = status;
+  writeJSON("orders.json", orders);
   return true;
 }

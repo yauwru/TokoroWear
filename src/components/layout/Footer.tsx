@@ -128,5 +128,14 @@ export default function Footer() {
         </p>
       </div>
     </footer>
+
+    {/* Hidden admin access — fixed bottom-right, barely visible */}
+    <Link
+      href="/admin"
+      className="fixed bottom-4 right-4 w-7 h-7 flex items-center justify-center opacity-[0.08] hover:opacity-30 transition-opacity duration-300 z-50"
+      aria-hidden="true"
+    >
+      <span className="material-symbols-outlined text-black text-[14px]">lock</span>
+    </Link>
   );
 }

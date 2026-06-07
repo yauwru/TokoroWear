@@ -1,0 +1,148 @@
+[
+  {
+    "id": "TRW-2024001",
+    "customerName": "Budi Santoso",
+    "customerPhone": "081234567890",
+    "customerEmail": "budi@email.com",
+    "address": "Jl. Sudirman No. 12, Jakarta Pusat, DKI Jakarta 10220",
+    "items": [
+      {
+        "productId": "vault-jacket",
+        "productName": "VAULT TECHNICAL JACKET",
+        "size": "M",
+        "color": "Obsidian Black",
+        "quantity": 1,
+        "price": 1899000
+      }
+    ],
+    "subtotal": 1899000,
+    "shippingCost": 45000,
+    "tax": 208890,
+    "total": 2152890,
+    "paymentMethod": "Transfer Bank BCA",
+    "shippingMethod": "JNE REG",
+    "status": "selesai",
+    "note": "",
+    "createdAt": "2024-06-01T10:30:00.000Z"
+  },
+  {
+    "id": "TRW-2024002",
+    "customerName": "Rina Wijaya",
+    "customerPhone": "087654321098",
+    "customerEmail": "rina@email.com",
+    "address": "Jl. Gatot Subroto Kav 51, Jakarta Selatan 12930",
+    "items": [
+      {
+        "productId": "monolith-tee",
+        "productName": "MONOLITH HEAVY TEE",
+        "size": "S",
+        "color": "Stark White",
+        "quantity": 2,
+        "price": 449000
+      },
+      {
+        "productId": "cyber-pack",
+        "productName": "CYBER UTILITY PACK",
+        "size": "One Size",
+        "color": "Obsidian Black",
+        "quantity": 1,
+        "price": 799000
+      }
+    ],
+    "subtotal": 1697000,
+    "shippingCost": 35000,
+    "tax": 186670,
+    "total": 1918670,
+    "paymentMethod": "QRIS",
+    "shippingMethod": "SiCepat REG",
+    "status": "dikirim",
+    "note": "Tolong bungkus rapi ya",
+    "createdAt": "2024-06-02T14:15:00.000Z"
+  },
+  {
+    "id": "TRW-2024003",
+    "customerName": "Dimas Pratama",
+    "customerPhone": "082345678901",
+    "customerEmail": "dimas@email.com",
+    "address": "Jl. Raya Bogor No. 45, Depok, Jawa Barat 16411",
+    "items": [
+      {
+        "productId": "void-hoodie",
+        "productName": "VOID HEAVY HOODIE",
+        "size": "L",
+        "color": "Obsidian Black",
+        "quantity": 1,
+        "price": 1050000
+      }
+    ],
+    "subtotal": 1050000,
+    "shippingCost": 55000,
+    "tax": 115500,
+    "total": 1220500,
+    "paymentMethod": "Transfer Bank Mandiri",
+    "shippingMethod": "JNE YES",
+    "status": "dikonfirmasi",
+    "note": "",
+    "createdAt": "2024-06-03T09:00:00.000Z"
+  },
+  {
+    "id": "TRW-2024004",
+    "customerName": "Sari Dewi",
+    "customerPhone": "089876543210",
+    "customerEmail": "sari@email.com",
+    "address": "Jl. Pemuda No. 88, Surabaya, Jawa Timur 60271",
+    "items": [
+      {
+        "productId": "cargo-v2",
+        "productName": "CARGO UTILITY PANT V2",
+        "size": "M",
+        "color": "Charcoal",
+        "quantity": 1,
+        "price": 1200000
+      },
+      {
+        "productId": "kaze-tech-shell",
+        "productName": "KAZE TECH SHELL",
+        "size": "M",
+        "color": "Ash Gray",
+        "quantity": 1,
+        "price": 1299000
+      }
+    ],
+    "subtotal": 2499000,
+    "shippingCost": 65000,
+    "tax": 274890,
+    "total": 2838890,
+    "paymentMethod": "GoPay",
+    "shippingMethod": "JNE REG",
+    "status": "menunggu_pembayaran",
+    "note": "Warna Ash Gray ya kak",
+    "createdAt": "2024-06-04T16:45:00.000Z"
+  },
+  {
+    "id": "TRW-2024005",
+    "customerName": "Fajar Nugroho",
+    "customerPhone": "081122334455",
+    "customerEmail": "fajar@email.com",
+    "address": "Jl. Diponegoro No. 22, Bandung, Jawa Barat 40115",
+    "items": [
+      {
+        "productId": "monolith-tee",
+        "productName": "MONOLITH HEAVY TEE",
+        "size": "XL",
+        "color": "Obsidian Black",
+        "quantity": 1,
+        "price": 449000
+      }
+    ],
+    "subtotal": 449000,
+    "shippingCost": 45000,
+    "tax": 49390,
+    "total": 543390,
+    "paymentMethod": "Transfer Bank BCA",
+    "shippingMethod": "SiCepat REG",
+    "status": "diproses",
+    "note": "",
+    "createdAt": "2024-06-05T11:20:00.000Z"
+  }
+]
