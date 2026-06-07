@@ -1,7 +1,7 @@
 import { auth } from "@/lib/auth";
 import { NextResponse } from "next/server";
 
-const ADMIN_EMAIL = "tokorowear@gmail.com";
+const ADMIN_EMAILS = ["tokorowear@gmail.com", "sjhosua19@gmail.com"];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
@@ -14,7 +14,7 @@ export default auth((req) => {
     if (!req.auth?.user) {
       return NextResponse.redirect(new URL("/admin/login", req.url));
     }
-    if (req.auth.user.email !== ADMIN_EMAIL) {
+    if (!ADMIN_EMAILS.includes(req.auth.user.email!)) {
       return NextResponse.redirect(new URL("/admin/unauthorized", req.url));
     }
   }

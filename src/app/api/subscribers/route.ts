@@ -28,7 +28,8 @@ export async function POST(req: NextRequest) {
 
 export async function DELETE(req: NextRequest) {
   const session = await auth();
-  if (session?.user?.email !== "tokorowear@gmail.com") {
+  const adminEmails = ["tokorowear@gmail.com", "sjhosua19@gmail.com"];
+  if (!adminEmails.includes(session?.user?.email ?? "")) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { email } = await req.json();

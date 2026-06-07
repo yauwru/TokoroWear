@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 
-const ADMIN_EMAIL = "tokorowear@gmail.com";
+const ADMIN_EMAILS = ["tokorowear@gmail.com", "sjhosua19@gmail.com"];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [Google],
@@ -21,7 +21,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       if (pathname.startsWith("/admin")) {
         if (!auth?.user) return false;
-        if (auth.user.email !== ADMIN_EMAIL) {
+        if (!ADMIN_EMAILS.includes(auth.user.email!)) {
           return Response.redirect(
             new URL("/admin/unauthorized", request.url)
           );
@@ -34,4 +34,4 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   session: { strategy: "jwt" },
 });
 
-export const ADMIN_EMAIL_CONST = ADMIN_EMAIL;
+export const ADMIN_EMAILS_CONST = ADMIN_EMAILS;
