@@ -5,7 +5,7 @@ import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-const WHATSAPP_NUMBER = "6281234567890"; // Ganti dengan nomor WA toko
+const WHATSAPP_NUMBER = "79149496407";
 
 export default function CheckoutPage() {
   const { items, subtotal, clearCart } = useCart();
