@@ -1,0 +1,58 @@
+[
+  {
+    "id": "qris",
+    "label": "QRIS",
+    "icon": "qr_code_2",
+    "isActive": true,
+    "fee": 0,
+    "description": "Scan QR dari semua e-wallet dan mobile banking"
+  },
+  {
+    "id": "gopay",
+    "label": "GoPay",
+    "icon": "account_balance_wallet",
+    "isActive": false,
+    "fee": 0,
+    "description": "Bayar langsung via GoPay"
+  },
+  {
+    "id": "ovo",
+    "label": "OVO",
+    "icon": "account_balance_wallet",
+    "isActive": false,
+    "fee": 0,
+    "description": "Bayar langsung via OVO"
+  },
+  {
+    "id": "dana",
+    "label": "DANA",
+    "icon": "account_balance_wallet",
+    "isActive": false,
+    "fee": 0,
+    "description": "Bayar langsung via DANA"
+  },
+  {
+    "id": "transfer_bca",
+    "label": "Transfer BCA",
+    "icon": "account_balance",
+    "isActive": false,
+    "fee": 0,
+    "description": "Transfer ke rekening BCA"
+  },
+  {
+    "id": "transfer_mandiri",
+    "label": "Transfer Mandiri",
+    "icon": "account_balance",
+    "isActive": true,
+    "fee": 0,
+    "description": "Transfer ke rekening Mandiri"
+  },
+  {
+    "id": "cod",
+    "label": "Bayar di Tempat (COD)",
+    "icon": "payments",
+    "isActive": true,
+    "fee": 5000,
+    "description": "Bayar saat barang tiba, biaya tambahan Rp 5.000"
+  }
+]

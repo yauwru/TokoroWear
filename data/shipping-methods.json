@@ -1,0 +1,9 @@
+[
+  {"id": "jne_reg", "label": "JNE Reguler", "courier": "JNE", "isActive": true, "estimatedDays": "3-5 hari", "rateType": "flat", "flatRate": 15000, "description": "Pengiriman reguler JNE ke seluruh Indonesia"},
+  {"id": "jne_yes", "label": "JNE YES (Yakin Esok Sampai)", "courier": "JNE", "isActive": true, "estimatedDays": "1-2 hari", "rateType": "flat", "flatRate": 35000, "description": "Garansi tiba esok hari"},
+  {"id": "jnt_reg", "label": "J&T Express", "courier": "J&T", "isActive": true, "estimatedDays": "2-4 hari", "rateType": "flat", "flatRate": 12000, "description": "Pengiriman cepat J&T"},
+  {"id": "sicepat_reg", "label": "SiCepat Reguler", "courier": "SiCepat", "isActive": true, "estimatedDays": "2-4 hari", "rateType": "flat", "flatRate": 13000, "description": "Pengiriman ekonomis SiCepat"},
+  {"id": "sicepat_best", "label": "SiCepat BEST", "courier": "SiCepat", "isActive": false, "estimatedDays": "1-2 hari", "rateType": "flat", "flatRate": 28000, "description": "Pengiriman express SiCepat"},
+  {"id": "gosend_instant", "label": "GoSend Instant", "courier": "GoSend", "isActive": false, "estimatedDays": "2-4 jam", "rateType": "flat", "flatRate": 20000, "description": "Pengiriman instan area Jabodetabek"},
+  {"id": "anteraja", "label": "AnterAja", "courier": "AnterAja", "isActive": false, "estimatedDays": "3-5 hari", "rateType": "flat", "flatRate": 11000, "description": "Pengiriman ekonomis AnterAja"}
+]
