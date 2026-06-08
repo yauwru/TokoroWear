@@ -57,17 +57,17 @@ export default function Footer() {
             </h5>
             <ul className="space-y-4 text-sm">
               {[
-                "Tentang Kami",
-                "Bantuan",
-                "Kebijakan Privasi",
-                "Syarat & Ketentuan",
+                { label: "Tentang Kami", href: "/tentang" },
+                { label: "Bantuan", href: "/bantuan" },
+                { label: "Kebijakan Privasi", href: "/kebijakan-privasi" },
+                { label: "Syarat & Ketentuan", href: "/syarat-ketentuan" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}

@@ -57,9 +57,9 @@ export default function Navbar() {
 
       {/* Actions */}
       <div className="flex items-center space-x-6">
-        <button className="hover:opacity-70 transition-opacity duration-200">
+        <Link href="/koleksi" className="hover:opacity-70 transition-opacity duration-200">
           <span className="material-symbols-outlined text-black">search</span>
-        </button>
+        </Link>
 
         <Link
           href="/keranjang"
@@ -75,9 +75,9 @@ export default function Navbar() {
           )}
         </Link>
 
-        <button className="hover:opacity-70 transition-opacity duration-200">
+        <Link href="/berlangganan" className="hover:opacity-70 transition-opacity duration-200">
           <span className="material-symbols-outlined text-black">person</span>
-        </button>
+        </Link>
       </div>
     </nav>
   );

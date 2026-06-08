@@ -250,7 +250,7 @@ export default function HomePage() {
               ketahanan urban.
             </p>
             <Link
-              href="#"
+              href="/tentang"
               className="inline-flex items-center gap-4 group w-fit"
             >
               <span className="font-headline font-bold uppercase tracking-widest text-lg group-hover:underline">
@@ -273,19 +273,12 @@ export default function HomePage() {
           Jadilah yang pertama mengetahui koleksi terbatas dan kolaborasi rahasia
           kami.
         </p>
-        <form className="w-full max-w-2xl flex flex-col md:flex-row gap-0">
-          <input
-            type="email"
-            placeholder="ALAMAT EMAIL ANDA"
-            className="flex-grow bg-white/10 border border-white/20 text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-white py-6 px-8 font-headline font-bold tracking-widest"
-          />
-          <button
-            type="submit"
-            className="bg-white text-black px-12 py-6 font-headline font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors"
-          >
-            DAFTAR
-          </button>
-        </form>
+        <Link
+          href="/berlangganan"
+          className="bg-white text-black px-12 py-6 font-headline font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors"
+        >
+          DAFTAR NEWSLETTER
+        </Link>
       </section>
     </div>
   );
